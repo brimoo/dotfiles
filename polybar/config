@@ -1,0 +1,181 @@
+[colors]
+background = 1d1f21 
+foreground = {{foreground}}
+yellow = f0c674
+black = 1d1f21
+white = c5c8c6
+red = cc6666
+green = b5bd68
+blue = 81a2be
+magenta = b294bb
+cyan = 8abeb7
+main = b294bb
+
+[bar/master]
+width = 100%
+height = 26
+separator = " "
+background = ${colors.background}
+foreground = ${colors.foreground}
+underline}
+underline-size = 0
+overline-size = 0
+font-0 = "Terminus:pixelsize=12:antialias=false;1"
+font-1 = "FontAwesome:pixelsize=10:antialias=true;1"
+font-2 = "Font Awesome 5 Free:pixelsize=10:antialias=true;1"
+font-3 = "Font Awesome 5 Free Solid:pixelsize=10:antialias=true;1"
+font-4 = "Font Awesome 5 Brands:pixelsize=10:antialias=true;1"
+
+[bar/top]
+inherit = bar/master
+modules-left = wm
+modules-center = time
+modules-right = volume network cpu temperature battery
+
+padding-right = 1
+
+[module/volume]
+type = internal/alsa
+
+; mapping = true
+format-volume = <ramp-volume><label-volume>
+
+label-volume = %percentage%%
+label-volume-foreground = ${colors.main}
+label-volume-background = ${colors.background}
+label-muted = "  MUTED "
+label-muted-foreground = ${colors.main}
+label-muted-background = ${colors.background}
+
+ramp-volume-0 = "  "
+ramp-volume-0-foreground = ${colors.main}
+ramp-volume-0-background = ${colors.background}
+ramp-volume-1 = "  "
+ramp-volume-1-foreground = ${colors.main}
+ramp-volume-1-background = ${colors.background}
+ramp-volume-2 = "  "
+ramp-volume-2-foreground = ${colors.main}
+ramp-volume-2-background = ${colors.background}
+ramp-volume-3 = "  "
+ramp-volume-3-foreground = ${colors.main}
+ramp-volume-3-background = ${colors.background}
+
+format-volume-padding = 1
+
+[module/network]
+type = internal/network
+interface = wlp2s0
+
+label-connected-foreground = ${colors.main}
+format-connected-prefix-foreground = ${colors.main}
+
+format-connected = <label-connected>
+
+format-connected-prefix = ""
+
+label-connected = %essid%
+
+label-connected-padding = 1
+
+format-connected-padding = 1
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+label-full-foreground = ${colors.main}
+label-charging-foreground = ${colors.main}
+label-discharging-foreground = ${colors.main}
+format-full-prefix-foreground = ${colors.main}
+format-charging-prefix-foreground = ${colors.main}
+format-discharging-prefix-foreground = ${colors.main}
+
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
+
+format-full-prefix = "" 
+format-charging-prefix = ""
+format-discharging-prefix = ""
+
+format-full-padding = 1
+format-charging-padding = 1
+format-discharging-padding = 1
+label-full-padding-left = 1
+label-charging-padding-left = 1
+label-discharging-padding-left = 1
+
+[module/temperature]
+type = internal/temperature
+
+thermal-zone = 2
+
+format = <ramp> <label>
+format-padding = 1
+
+label-foreground = ${colors.main}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+
+ramp-foreground = ${colors.main}
+
+[module/title]
+type = internal/xwindow
+label = %title%
+label-maxlen = 75
+
+[module/ram]
+type = internal/memory
+interval = 3
+
+label-foreground = ${colors.main}
+label-padding = 1
+format-prefix = ""
+format-prefix-foreground = ${colors.main}
+format-padding = 1
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+
+label-foreground = ${colors.main}
+label-padding = 1
+format-prefix = ""
+format-prefix-foreground = ${colors.main}
+
+[module/wm]
+type = internal/i3
+enable-click = true
+enable-scroll = false
+strip-wsnumbers = true
+
+format-padding = 1
+label-focused-foreground = ${colors.white}
+label-unfocused-foreground = ${colors.main}
+label-focused-padding = 1
+
+label-unfocused-padding = 1
+
+label-visible-padding = 1
+
+label-urgent-foreground = ${colors.main}
+label-urgent-padding = 1
+
+ws-icon-0 = 1:web;
+ws-icon-1 = 2:term;
+ws-icon-2 = 3:code;
+ws-icon-3 = 4:music;
+ws-icon-4 = 5:discord;
+
+[module/time]
+type = internal/date
+interval = 40
+
+format-padding = 1
+label-foreground = ${colors.white}
+
+date = "%I:%M %p - %A"

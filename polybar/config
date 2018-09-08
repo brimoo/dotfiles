@@ -83,29 +83,32 @@ format-connected-padding = 1
 type = internal/battery
 battery = BAT0
 adapter = AC
-full-at = 98
 
+format-discharging = <ramp-capacity> <label-discharging>
+format-charging = <ramp-capacity> <label-charging>
+format-full = <ramp-capacity> <label-full>
+
+format-charging-foreground = ${colors.main}
+format-discharging-foreground = ${colors.main}
+format-full-foreground = ${colors.main}
 label-full-foreground = ${colors.main}
 label-charging-foreground = ${colors.main}
 label-discharging-foreground = ${colors.main}
-format-full-prefix-foreground = ${colors.main}
-format-charging-prefix-foreground = ${colors.main}
-format-discharging-prefix-foreground = ${colors.main}
+ramp-foreground = ${colors.main}
 
 label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = %percentage%%
 
-format-full-prefix = "" 
-format-charging-prefix = ""
-format-discharging-prefix = ""
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
-format-full-padding = 1
 format-charging-padding = 1
 format-discharging-padding = 1
-label-full-padding-left = 1
-label-charging-padding-left = 1
-label-discharging-padding-left = 1
+format-full-padding = 1
 
 [module/temperature]
 type = internal/temperature

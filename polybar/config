@@ -17,14 +17,13 @@ height = 26
 separator = " "
 background = ${colors.background}
 foreground = ${colors.foreground}
-underline}
 underline-size = 0
 overline-size = 0
-font-0 = "Terminus:pixelsize=12:antialias=false;1"
-font-1 = "FontAwesome:pixelsize=10:antialias=true;1"
-font-2 = "Font Awesome 5 Free:pixelsize=10:antialias=true;1"
-font-3 = "Font Awesome 5 Free Solid:pixelsize=10:antialias=true;1"
-font-4 = "Font Awesome 5 Brands:pixelsize=10:antialias=true;1"
+font-0 = "Terminus:pixelsize=10:antialias=false;1"
+font-1 = "Font Awesome 5 Free:pixelsize=10:antialias=true;1"
+font-2 = "Font Awesome 5 Free Solid:pixelsize=10:antialias=true;1"
+font-3 = "Font Awesome 5 Brands:pixelsize=10:antialias=true;1"
+font-4 = "FontAwesome:pixelsize=10:antialias=true;1"
 
 [bar/top]
 inherit = bar/master
@@ -71,7 +70,7 @@ format-connected-prefix-foreground = ${colors.main}
 
 format-connected = <label-connected>
 
-format-connected-prefix = ""
+format-connected-prefix = ""
 
 label-connected = %essid%
 
@@ -100,6 +99,8 @@ label-charging = %percentage%%
 label-discharging = %percentage%%
 label-full = %percentage%%
 
+ramp-capacity-font = 5
+
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
@@ -120,9 +121,11 @@ format-padding = 1
 
 label-foreground = ${colors.main}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
 
 ramp-foreground = ${colors.main}
 
@@ -131,23 +134,13 @@ type = internal/xwindow
 label = %title%
 label-maxlen = 75
 
-[module/ram]
-type = internal/memory
-interval = 3
-
-label-foreground = ${colors.main}
-label-padding = 1
-format-prefix = ""
-format-prefix-foreground = ${colors.main}
-format-padding = 1
-
 [module/cpu]
 type = internal/cpu
 interval = 1
 
 label-foreground = ${colors.main}
 label-padding = 1
-format-prefix = ""
+format-prefix = ""
 format-prefix-foreground = ${colors.main}
 
 [module/wm]
@@ -173,6 +166,10 @@ ws-icon-1 = 2:term;
 ws-icon-2 = 3:code;
 ws-icon-3 = 4:music;
 ws-icon-4 = 5:discord;
+ws-icon-5 = 6:temp1;
+ws-icon-6 = 7:temp2;
+ws-icon-7 = 8:temp3;
+ws-icon-8 = 9:temp4;
 
 [module/time]
 type = internal/date

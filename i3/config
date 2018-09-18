@@ -18,13 +18,16 @@ exec --no-startup-id redshift
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start rofi (a program launcher)
 bindsym $mod+d exec rofi -show run
+
+# start network manger in rofi
+bindsym $mod+n exec networkmanager_dmenu
 
 # change focus
 bindsym $mod+Left focus left
@@ -74,6 +77,10 @@ set $ws2 "2:term"
 set $ws3 "3:code"
 set $ws4 "4:music"
 set $ws5 "5:discord"
+set $ws6 "6:temp1"
+set $ws7 "7:temp2"
+set $ws8 "8:temp3"
+set $ws9 "9:temp4"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -84,6 +91,7 @@ bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1

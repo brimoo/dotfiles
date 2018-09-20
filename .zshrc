@@ -38,7 +38,7 @@ SPACESHIP_PROMPT_ORDER=(
   kubecontext   # Kubectl context section
   exec_time     # Execution time
   line_sep      # Line break
-  #battery     # Battery level and status
+  #battery      # Battery level and status
   vi_mode       # Vi-mode indicator
   jobs          # Background jobs indicator
   exit_code     # Exit code section
@@ -170,6 +170,7 @@ alias pacman='sudo pacman --color always'
 alias r='ranger-cd'
 alias neofetch='clear && neofetch'
 alias raelc=clear
+alias ls=exa
 
 # Syntax Highlighting
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

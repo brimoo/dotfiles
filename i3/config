@@ -72,15 +72,15 @@ gaps inner 10
 gaps outer 5
 
 # Define names for default workspaces for which we configure key bindings later on.
-set $ws1 "1:web"
-set $ws2 "2:term"
-set $ws3 "3:code"
-set $ws4 "4:music"
-set $ws5 "5:discord"
-set $ws6 "6:temp1"
-set $ws7 "7:temp2"
-set $ws8 "8:temp3"
-set $ws9 "9:temp4"
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4:"
+set $ws5 "5:"
+set $ws6 "6:"
+set $ws7 "7:"
+set $ws8 "8:"
+set $ws9 "9:"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1

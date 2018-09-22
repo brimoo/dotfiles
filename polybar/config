@@ -1,17 +1,18 @@
 [colors]
-background = 1d1f21 
-background_alt = 161719
-white_alt = 777777
+#background = 181818
+background = 00000000
+background_alt = 0effffff
+white_alt = 7e7e7e
 foreground = {{foreground}}
-yellow = f0c674
-black = 1d1f21
-white = c5c8c6
-red = cc6666
-green = b5bd68
-blue = 81a2be
-magenta = b294bb
-cyan = 8abeb7
-main = b294bb
+yellow = f7ca88
+black = 181818
+white = d8d8d8
+red = ab4642
+green = a1b56c
+blue = 7cafc2
+magenta = ba8baf
+cyan = 86c1b9
+main = d8d8d8
 
 [bar/master]
 width = 100%
@@ -21,11 +22,11 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 underline-size = 0
 overline-size = 0
-font-0 = "Terminus:pixelsize=10:antialias=false;1"
+font-0 = "Terminus:pixelsize=10:antialias=false;3"
 font-1 = "Font Awesome 5 Free:pixelsize=10:antialias=true;1"
-font-2 = "Font Awesome 5 Free Solid:pixelsize=10:antialias=true;1"
+font-2 = "Font Awesome 5 Free Solid:pixelsize=10:antialias=true;3"
 font-3 = "Font Awesome 5 Brands:pixelsize=12:antialias=true;1"
-font-4 = "FontAwesome:pixelsize=10:antialias=true;1"
+font-4 = "FontAwesome:pixelsize=10:antialias=true;3"
 font-5 = "Font Awesome 5 Free Solid:pixelsize=12:antialias=true;1"
 
 [bar/top]
@@ -38,31 +39,29 @@ underline-size = 2
 padding-right = 1
 
 [module/volume]
-type = internal/alsa
+type = internal/pulseaudio
 
-; mapping = true
-format-volume = <ramp-volume> <label-volume>
-format-muted =  <ramp-volume> <label-muted>
+sink = alsa_output.pci.0000_00_1b.0.analog-stereo
+mapped = true
 
-label-volume = %percentage%%
-label-volume-foreground = ${colors.white}
-label-volume-background = ${colors.background}
-label-muted = "MUTED"
-label-muted-foreground = ${colors.white}
-label-muted-background = ${colors.background}
+format-volume = <label-volume> <bar-volume>
+format-muted = <label-muted> <bar-volume>
+label-volume = ""
+label-volume-foreground = ${colors.main}
 
-ramp-volume-0 = ""
-ramp-volume-0-foreground = ${colors.main}
-ramp-volume-0-background = ${colors.background}
-ramp-volume-1 = ""
-ramp-volume-1-foreground = ${colors.main}
-ramp-volume-1-background = ${colors.background}
-ramp-volume-2 = ""
-ramp-volume-2-foreground = ${colors.main}
-ramp-volume-2-background = ${colors.background}
-ramp-volume-3 = ""
-ramp-volume-3-foreground = ${colors.main}
-ramp-volume-3-background = ${colors.background}
+label-muted = ""
+format-muted-foreground = ${colors.main}
+
+bar-volume-width = 20
+bar-volume-foreground-0 = ${colors.green}
+bar-volume-gradient = false
+bar-volume-indicator = │
+bar-volume-indicator-foreground = ${colors.main}
+bar-volume-fill = ─
+bar-volume-empty = ─
+bar-volume-empty-foreground = ${colors.main}
+
+
 
 format-volume-padding = 1
 format-muted-padding = 1
@@ -160,7 +159,7 @@ format = <label-mode> <label-state>
 format-padding = 1
 
 label-focused-foreground = ${colors.white}
-label-focused-underline = ${colors.main}
+label-focused-underline = ${colors.green}
 label-focused-background = ${colors.background_alt}
 label-focused-padding = 1
 
@@ -177,8 +176,10 @@ label-focused-font = 6
 label-unfocused-font = 6
 label-visible-font = 6
 
+label-mode_system-foreground = ${colors.white}
+
 ws-icon-0 = 1:; 
-ws-icon-1 = 2:; 
+ws-icon-1 = 2:; 
 ws-icon-2 = 3:; 
 ws-icon-3 = 4:; 
 ws-icon-4 = 5:; 

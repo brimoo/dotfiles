@@ -10,7 +10,7 @@ new_window pixel 2
 
 # Auto-starts
 exec_always --no-startup-id $HOME/.config/polybar/polybar.sh
-exec --no-startup-id nitrogen --set-auto ~/Pictures/flowerboi.jpg
+exec --no-startup-id nitrogen --set-scaled ~/Pictures/spacesurf.png
 exec --no-startup-id compton -b
 # exec --no-startup-id redshift
 
@@ -68,7 +68,7 @@ bindsym $mod+a focus parent
 bindsym $mod+0 exec --no-startup-id i3lock-next
 
 # Set Gaps
-gaps inner 10
+gaps inner 20
 gaps outer 5
 
 # Define names for default workspaces for which we configure key bindings later on.
@@ -129,23 +129,23 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-# Special system mode
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate
-mode "$mode_system" {
-  bindsym l exec --no-startup-id i3lock-next, mode "default"
-  bindsym e exec --no-startup-id i3exit logout, mode "default"
-  bindsym s exec --no-startup-id i3exit suspend, mode "default"
-  bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-# back to normal
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-}
-bindsym $mod+Shift+e mode "$mode_system"
+# # Special system mode
+# set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate
+# mode "$mode_system" {
+#   bindsym l exec --no-startup-id i3lock-next, mode "default"
+#   bindsym e exec --no-startup-id i3exit logout, mode "default"
+#   bindsym s exec --no-startup-id i3exit suspend, mode "default"
+#   bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+# # back to normal
+#   bindsym Return mode "default"
+#   bindsym Escape mode "default"
+# }
+# bindsym $mod+Shift+e mode "$mode_system"
 
-client.focused              #c5c8c6 #c5c8c6 #c5c8c6 #c5c8c6 #c5c8c6
-client.unfocused            #b294bb #b294bb #b294bb #b294bb #b294bb
-client.urgent               #b294bb #b294bb #b294bb #b294bb #b294bb 
-client.focused_inactive     #b294bb #b294bb #b294bb #b294bb #b294bb 
+client.focused              #d8d8d8 #d8d8d8 #d8d8d8 #d8d8d8 #d8d8d8
+client.unfocused            #7e7e7e #7e7e7e #7e7e7e #7e7e7e #7e7e7e
+client.urgent               #7e7e7e #7e7e7e #7e7e7e #7e7e7e #7e7e7e 
+client.focused_inactive     #7e7e7e #7e7e7e #7e7e7e #7e7e7e #7e7e7e 
 
 # alsa Audio Controls {{{
 bindsym XF86AudioMute        exec --no-startup-id amixer set Master toggle
@@ -164,3 +164,6 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Resize
 bindsym $mod+r mode "resize"
+
+# Screenshot
+bindsym --release $mod+Shift+s exec deepin-screenshot

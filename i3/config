@@ -10,7 +10,7 @@ new_window pixel 2
 
 # Auto-starts
 exec_always --no-startup-id $HOME/.config/polybar/polybar.sh
-exec --no-startup-id nitrogen --set-scaled ~/Pictures/spacesurf.png
+exec --no-startup-id nitrogen --set-scaled ~/Pictures/paintedmountainsedit.png
 exec --no-startup-id compton -b
 # exec --no-startup-id redshift
 
@@ -118,10 +118,10 @@ mode "resize" {
         bindsym semicolon resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Right resize shrink width 10 px or 10 ppt
+        bindsym Up resize grow height 10 px or 10 ppt
+        bindsym Down resize shrink height 10 px or 10 ppt
+        bindsym Left resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"

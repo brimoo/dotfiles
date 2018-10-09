@@ -162,7 +162,7 @@ function ranger-cd {
 
 #Aliases
 alias R='R --quiet'
-alias vim=code
+alias vim=$EDITOR
 alias c=clear
 alias clera=clear
 alias celar=clear

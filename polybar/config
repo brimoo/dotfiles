@@ -1,5 +1,5 @@
 [colors]
-#background = 181818
+# background = 181818
 background = 00000000
 background_alt = 0effffff
 white_alt = 7e7e7e
@@ -119,12 +119,15 @@ format-full-padding = 1
 [module/temperature]
 type = internal/temperature
 
-thermal-zone = 2
+thermal-zone = 5
 
 format = <ramp> <label>
 format-padding = 1
 
 label-foreground = ${colors.white}
+
+label = %temperature%
+label-warn = %temperature%
 
 ramp-0 = 
 ramp-1 = 
@@ -145,7 +148,7 @@ interval = 1
 
 label-foreground = ${colors.white}
 label-padding = 1
-format-prefix = ""
+format-prefix = ""
 format-prefix-foreground = ${colors.main}
 
 [module/wm]

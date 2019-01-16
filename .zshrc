@@ -136,7 +136,6 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=code
 export VISUAL='code -wn'
 
-
 # Base16 Shell
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
@@ -148,6 +147,12 @@ export GOBIN=$HOME/Coding/Go/bin
 # Java Environment Vaiables
 export JAVA_HOME=/usr/lib/jvm/default
 export PATH=$JAVA_HOME/bin:$PATH
+
+# Android Environment Variables
+# export ANDROID_HOME=/home/brian/Android/sdk
+# export ANDROID_SDK_ROOT=$ANDROID_HOME
+# export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+# export PATH=$PATH:$ANDROID_SDK_ROOT/tools
 
 # Ranger cd func
 function ranger-cd {
@@ -171,6 +176,7 @@ alias r='ranger-cd'
 alias neofetch='clear && neofetch'
 alias raelc=clear
 alias ls=exa
+alias asdflkjhasdflkjh=clear
 
 # Syntax Highlighting
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

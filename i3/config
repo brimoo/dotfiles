@@ -10,15 +10,23 @@ new_window pixel 2
 
 # Auto-starts
 exec_always --no-startup-id $HOME/.config/polybar/polybar.sh
-exec --no-startup-id nitrogen --set-scaled ~/Pictures/paintedmountainsedit.png
+# exec --no-startup-id nitrogen --set-scaled ~/Pictures/paintedmountainsedit.png
+exec --no-startup-id feh --bg-scale ~/Pictures/flowers.jpg
 exec --no-startup-id compton -b
+exec --no-startup-id ~/.scripts/blurme -t 0.005 &
 # exec --no-startup-id redshift
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Hide edges
+#Mhide_edge_borders smart
+
 # start a terminal
 bindsym $mod+Return exec alacritty
+
+# start a dropdown terminal
+bindsym $mod+Shift+Return exec i3-quickterm shell
 
 # kill focused window
 bindsym $mod+Shift+q kill

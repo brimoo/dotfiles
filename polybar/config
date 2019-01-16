@@ -1,7 +1,8 @@
 [colors]
-# background = 181818
-background = 00000000
-background_alt = 0effffff
+background = B3181818
+# background = 00000000
+# background_alt = 0effffff
+background_alt = B3070707
 white_alt = 7e7e7e
 foreground = {{foreground}}
 yellow = f7ca88
@@ -13,21 +14,18 @@ blue = 7cafc2
 magenta = ba8baf
 cyan = 86c1b9
 main = d8d8d8
+accent = ba8baf
 
 [bar/master]
 width = 100%
-height = 26
+height = 30
 separator = " "
 background = ${colors.background}
 foreground = ${colors.foreground}
 underline-size = 0
 overline-size = 0
-font-0 = "Terminus:pixelsize=10:antialias=false;3"
-font-1 = "Font Awesome 5 Free:pixelsize=10:antialias=true;1"
-font-2 = "Font Awesome 5 Free Solid:pixelsize=10:antialias=true;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=12:antialias=true;1"
-font-4 = "FontAwesome:pixelsize=10:antialias=true;3"
-font-5 = "Font Awesome 5 Free Solid:pixelsize=12:antialias=true;1"
+font-0 = "Dina:pixelsize=10:antialias=false;1"
+font-1 = "WunconSiji:pixelsize=12:antialias=false;1"
 
 [bar/top]
 inherit = bar/master
@@ -46,19 +44,19 @@ mapped = true
 
 format-volume = <label-volume> <bar-volume>
 format-muted = <label-muted> <bar-volume>
-label-volume = ""
+label-volume = ""
 label-volume-foreground = ${colors.main}
 
-label-muted = ""
+label-muted = ""
 format-muted-foreground = ${colors.main}
 
 bar-volume-width = 20
-bar-volume-foreground-0 = ${colors.green}
+bar-volume-foreground-0 = ${colors.accent}
 bar-volume-gradient = false
-bar-volume-indicator = │
+bar-volume-indicator = |
 bar-volume-indicator-foreground = ${colors.main}
-bar-volume-fill = ─
-bar-volume-empty = ─
+bar-volume-fill = -
+bar-volume-empty = -
 bar-volume-empty-foreground = ${colors.main}
 
 
@@ -75,7 +73,7 @@ format-connected-prefix-foreground = ${colors.main}
 
 format-connected = <label-connected>
 
-format-connected-prefix = ""
+format-connected-prefix = ""
 
 label-connected = %essid%
 
@@ -106,11 +104,11 @@ label-full = %percentage%%
 
 ramp-capacity-font = 5
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
 
 format-charging-padding = 1
 format-discharging-padding = 1
@@ -129,11 +127,11 @@ label-foreground = ${colors.white}
 label = %temperature%
 label-warn = %temperature%
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-ramp-4 = 
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
 
 ramp-foreground = ${colors.main}
 
@@ -148,7 +146,7 @@ interval = 1
 
 label-foreground = ${colors.white}
 label-padding = 1
-format-prefix = ""
+format-prefix = ""
 format-prefix-foreground = ${colors.main}
 
 [module/wm]
@@ -159,10 +157,10 @@ strip-wsnumbers = true
 
 format = <label-mode> <label-state>
 
-format-padding = 1
+# format-padding = 1
 
 label-focused-foreground = ${colors.white}
-label-focused-underline = ${colors.green}
+label-focused-underline = ${colors.accent}
 label-focused-background = ${colors.background_alt}
 label-focused-padding = 1
 
@@ -175,21 +173,17 @@ label-visible-padding = 1
 label-urgent-foreground = ${colors.white_alt}
 label-urgent-padding = 1
 
-label-focused-font = 6
-label-unfocused-font = 6
-label-visible-font = 6
-
 label-mode_system-foreground = ${colors.white}
 
-ws-icon-0 = 1:; 
-ws-icon-1 = 2:; 
-ws-icon-2 = 3:; 
-ws-icon-3 = 4:; 
-ws-icon-4 = 5:; 
-ws-icon-5 = 6:; 
-ws-icon-6 = 7:; 
-ws-icon-7 = 8:; 
-ws-icon-8 = 9:; 
+ws-icon-0 = 1:; 
+ws-icon-1 = 2:; 
+ws-icon-2 = 3:; 
+ws-icon-3 = 4:; 
+ws-icon-4 = 5:; 
+ws-icon-5 = 6:; 
+ws-icon-6 = 7:; 
+ws-icon-7 = 8:; 
+ws-icon-8 = 9:; 
 
 [module/time]
 type = internal/date
@@ -198,4 +192,4 @@ interval = 40
 format-padding = 1
 label-foreground = ${colors.white}
 
-date = "%I:%M %p - %A"
+date = "%I:%M %p - %A, %B %dth"

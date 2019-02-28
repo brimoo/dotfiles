@@ -1,0 +1,160 @@
+[colors]
+background = 1c1e26
+foreground = {{foreground}}
+main_alt = 5e5e5e
+main = cccccc
+accent = ec6a88
+
+[bar/master]
+width = 90%
+height = 26
+separator = " "
+background = ${colors.background}
+foreground = ${colors.foreground}
+underline-size = 0
+overline-size = 0
+font-0 = "Terminus:pixelsize=10:antialias=false;2"
+font-1 = "WunconSiji:pixelsize=10:antialias=false;2"
+
+[bar/top]
+inherit = bar/master
+modules-left = bspwm
+modules-center = time
+modules-right = volume network cpu temperature
+underline-size = 2
+
+padding-right = 1
+
+offset-x = 5%
+offset-y = 10
+
+[module/volume]
+type = internal/pulseaudio
+
+sink = alsa_output.pci.0000_00_1f.3.analog-stereo
+mapped = true
+
+format-volume = <label-volume> <bar-volume>
+format-muted = <label-muted> <bar-volume>
+label-volume = ""
+label-volume-foreground = ${colors.main}
+
+label-muted = ""
+format-muted-foreground = ${colors.main}
+
+bar-volume-width = 20
+bar-volume-foreground-0 = ${colors.accent}
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-foreground = ${colors.main}
+bar-volume-fill = -
+bar-volume-empty = -
+bar-volume-empty-foreground = ${colors.main}
+
+format-volume-padding = 1
+format-muted-padding = 1
+
+[module/network]
+type = internal/network
+interface = enp2s0
+
+label-connected-foreground = ${colors.main}
+format-connected-prefix-foreground = ${colors.main}
+
+format-connected = <label-connected>
+
+format-connected-prefix = ""
+
+label-connected = CONN
+
+label-connected-padding = 1
+
+format-connected-padding = 1
+
+[module/temperature]
+type = internal/temperature
+
+thermal-zone = 2
+
+format = <ramp> <label>
+format-padding = 1
+
+label-foreground = ${colors.main}
+
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+ramp-4 = 
+
+ramp-foreground = ${colors.main}
+
+[module/title]
+type = internal/xwindow
+label = %title%
+label-maxlen = 75
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+
+label-foreground = ${colors.main}
+label-padding = 1
+format-prefix = ""
+format-prefix-foreground = ${colors.main}
+
+[module/bspwm]
+type = internal/bspwm
+enable-click = true
+enable-scroll = false
+# strip-wsnumbers = true
+
+format = <label-mode> <label-state>
+
+#format-padding = 1
+
+label-focused = %icon%
+label-focused-underline = ${colors.accent}
+# label-unfocused-underline = ${colors.accent}
+
+label-focused-foreground = ${colors.main}
+label-focused-background = ${colors.background}
+label-focused-padding = 2
+
+label-occupied = %icon%
+label-occupied-foreground = ${colors.main}
+label-occupied-padding = 2
+
+label-empty = %icon%
+label-empty-foreground = ${colors.main_alt}
+label-empty-padding = 2
+
+label-visible-foreground = ${colors.main}
+label-visible-padding = 1
+
+label-urgent-foreground = ${colors.main}
+label-urgent-padding = 1
+
+label-mode_system-foreground = ${colors.main}
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+
+[module/time]
+type = internal/date
+interval = 40
+
+format-padding = 1
+label-foreground = ${colors.main}
+
+click-left = alacritty
+
+# date = "%I:%M %p - %A (%m/%d)"
+date = "%I:%M %p - %A %D"

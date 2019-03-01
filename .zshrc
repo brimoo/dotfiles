@@ -8,7 +8,7 @@
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 
-ZSH_THEME="spaceship"
+ZSH_THEME="jap"
 
 SPACESHIP_PROMPT_ORDER=(
   time          # Time stampts section
@@ -138,8 +138,8 @@ export VISUAL='code -wn'
 
 
 # Base16 Shell
-# BASE16_SHELL=$HOME/.config/base16-shell/
-# [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # Go Environment Variables
 export GOPATH=$HOME/Coding/Go
@@ -173,6 +173,11 @@ alias neofetch='clear && neofetch'
 alias raelc=clear
 alias ls=exa
 alias matlab='matlab & disown'
+alias firefox='firefox-nightly & disown'
+alias discord='discord & disown'
+alias fire='firefox-nightly & disown'
+alias spotify='spotify & disown'
+alias steam='steam & disown'
 
 # Syntax Highlighting
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

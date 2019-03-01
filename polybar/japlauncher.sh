@@ -7,6 +7,6 @@ killall -q polybar
 while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar
-polybar -c $HOME/.config/polybar/config.bspwm top &
+polybar -c $HOME/.config/polybar/config.jap top &
 
 echo "Bars launched..."

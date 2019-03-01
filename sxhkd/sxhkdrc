@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	urxvt
 
 # program launcher
 super + d
-	rofi -show run
+	launcher.sh
 
 # network manager launcher
 super + n

@@ -3,7 +3,7 @@
 # Startup stuff
 sxhkd &
 compton -b
-./.config/polybar/japlauncher.sh
+./.config/polybar/crazylauncher.sh
 feh --bg-scale ~/Pictures/train.jpg
 
 # BSP Config Stuff

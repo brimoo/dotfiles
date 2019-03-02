@@ -1,0 +1,50 @@
+! special
+URxvt.foreground:   #eee4e5
+URxvt.background:   #0d0c0f
+URxvt.cursorColor:  #eee4e5
+
+! black
+URxvt.color0:       #0d0c0f
+URxvt.color8:       #42423d
+
+! red
+URxvt.color1:       #e47ca3
+URxvt.color9:       #ff8eb4
+
+! green
+URxvt.color2:       #75a393
+URxvt.color10:      #8cc2aa
+
+! yellow
+URxvt.color3:       #e1a7b5
+URxvt.color11:      #ffbec9
+
+! blue
+URxvt.color4:       #acc6bc
+URxvt.color12:      #c8e5d5
+
+! magenta
+URxvt.color5:       #ae8497
+URxvt.color13:      #cc9cad
+
+! cyan
+URxvt.color6:       #9dafac
+URxvt.color14:      #bacec6
+
+! white
+URxvt.color7:       #787376
+URxvt.color15:      #eee4e5
+URxvt.font: xft: Terminus:Pixelsize=10,xft:Wuncon Siji:Pixelsize=10
+URxvt.scrollBar: false
+URxvt.internalBorder: 30
+URxvt.lineSpace:    0
+URxvt.letterSpace: 0
+Xft.autohint:           0
+Xft.lcdfilter:          lcddefault
+Xft.hinting:            1
+Xft.hintstyle:          hintslight
+Xft.antialias:          1
+Xft.rgba: rgb
+URxvt.cursorBlink: 1
+URxvt.cursorUnderline: 1
+twobwm.enable_compton: true
